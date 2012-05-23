@@ -1,1 +1,4 @@
 Program to add a context menu entry "Download Subtitle" on right clicking a video file.
+
+1. Context Menu entry provided by nautilus-actions
+2. On clicking 'Download Subtitle' getSUB.py is called to download the sub from opensubtitles.org
