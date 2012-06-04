@@ -66,8 +66,15 @@ try:
         sub_dict['subid']=subs['IDSubtitleFile']
         sub_dict['sub_fmt']=subs['SubFormat']
         sub_list.append(sub_dict)
+    sub_index=0
+    cnt=0
+    for sub in sub_list:
+        if sub['sub_fmt']=='srt':
+            sub_index=cnt
+            break
+        cnt+=1
     #TODO:Create UI and pass the selected subID to downloadSUB
-    downloadSUB(FILE_PATH,srv_proxy,login_resp['token'],sub_list[0])#Asuming that 0 is the selected SUB
+    downloadSUB(FILE_PATH,srv_proxy,login_resp['token'],sub_list[sub_index])#Asuming that 0 is the selected SUB
     srv_proxy.LogOut(login_resp['token'])
 except:
     srv_proxy.LogOut(login_resp['token'])
