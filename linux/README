@@ -1,0 +1,11 @@
+Working script for Linux (Tested Only on Ubuntu)
+
+Program to add a context menu entry "Download Subtitle" on right clicking a video file.
+
+Need to install nautilus-actions package
+sudo apt-get install nautilus-actions
+
+1. Context Menu entry provided by nautilus-actions
+2. On clicking 'Download Subtitle' getSUB.py is called to download the sub from opensubtitles.org
+
+TODO: Currently the first english sub is downloaded. To implement a simple UI to let user to select which subtitle and choose language to be downloaded.
